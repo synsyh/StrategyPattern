@@ -25,6 +25,8 @@ public class MainFrame {
                 monkButton.setEnabled(true);
                 ninjaButton.setEnabled(true);
                 knightButton.setEnabled(false);
+
+                role=knight;
             }
         });
         ninjaButton.addMouseListener(new MouseAdapter() {
@@ -34,6 +36,8 @@ public class MainFrame {
                 monkButton.setEnabled(true);
                 knightButton.setEnabled(true);
                 ninjaButton.setEnabled(false);
+
+                role=ninja;
             }
         });
 
@@ -42,8 +46,7 @@ public class MainFrame {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 role.setAttack(role.handAttack);
-                textArea1.append(role.getClass().getName());
-                textArea1.append(role.startAttack());
+                display();
             }
         });
         swordButton.addMouseListener(new MouseAdapter() {
@@ -51,8 +54,7 @@ public class MainFrame {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 role.setAttack(role.swordAttack);
-                textArea1.append(role.getClass().getName());
-//                textArea1.append(role.startAttack());
+                display();
             }
         });
         knifeButton.addMouseListener(new MouseAdapter() {
@@ -67,7 +69,6 @@ public class MainFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                monkButton.setEnabled(false);
                 role.setAttack(role.fireAttack);
                 display();
             }
@@ -76,7 +77,6 @@ public class MainFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                monkButton.setEnabled(false);
                 role.setAttack(role.metalAttack);
                 display();
             }
@@ -85,7 +85,6 @@ public class MainFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                monkButton.setEnabled(false);
                 role.setAttack(role.waterAttack);
                 display();
             }
@@ -100,8 +99,8 @@ public class MainFrame {
         frame.setVisible(true);
     }
 
-    private void display(){
-        textArea1.append(role.getClass().getName() + " attack with " + role.startAttack());
+    private void display() {
+        textArea1.append(role.getClass().getName() + ' ' + role.startAttack() + '\n');
     }
 
     private JButton monkButton;
@@ -116,7 +115,8 @@ public class MainFrame {
     private JButton metalButton;
     private JButton waterButton;
 
-    private String tmp=" attack with ";
     public Role role;
     public Monk monk = new Monk();
+    public Ninja ninja=new Ninja();
+    public Knight knight=new Knight();
 }

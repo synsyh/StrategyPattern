@@ -4,6 +4,6 @@
 public class KnifeAttack implements PhysicalAttack {
     @Override
     public String attack() {
-        return "knife";
+        return "attack with knife";
     }
 }

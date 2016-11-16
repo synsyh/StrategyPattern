@@ -81,13 +81,23 @@
           </component>
         </children>
       </grid>
-      <component id="fc8bd" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+      <scrollpane id="45a1f">
         <constraints/>
-        <properties>
-          <columns value="20"/>
-          <rows value="5"/>
-        </properties>
-      </component>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="fc8bd" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+            <constraints/>
+            <properties>
+              <columns value="30"/>
+              <lineWrap value="true"/>
+              <rows value="5"/>
+              <text value=""/>
+              <wrapStyleWord value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
     </children>
   </grid>
 </form>

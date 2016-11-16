@@ -4,6 +4,6 @@
 public class WaterAttack implements MagicAttack {
     @Override
     public String attack() {
-        return "water";
+        return "attack with water";
     }
 }

@@ -4,6 +4,6 @@
 public class MetalAttack implements MagicAttack {
     @Override
     public String attack() {
-        return "metal";
+        return "attack with metal";
     }
 }
